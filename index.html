@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我太想进步了</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <button class="ghost-button" id="homeButton" type="button" aria-label="返回首页">我太想进步了</button>
+        <div class="top-actions">
+          <select id="languageSelect" aria-label="语言">
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="home-view" id="homeView">
+        <p class="eyebrow">弦外之音 / 职场模拟 / 敬酒词</p>
+        <h1>我太想进步了</h1>
+        <p class="lead">训练听懂话外音、场面话、职场暗示和饭局礼仪。首页只保留五个入口，点进去再按大分类和小分类筛选。</p>
+
+        <nav class="home-grid" aria-label="功能入口">
+          <button class="home-card" type="button" data-route="xianwai">
+            <span>01</span>
+            <strong>弦外之音</strong>
+            <small>高赞评论整理出的善意提醒与话外音案例</small>
+          </button>
+          <button class="home-card" type="button" data-route="xianwaiRanked">
+            <span>02</span>
+            <strong>弦外之音排位模式</strong>
+            <small>随机出题，按得分评级</small>
+          </button>
+          <button class="home-card" type="button" data-route="workplace">
+            <span>03</span>
+            <strong>职场模拟器</strong>
+            <small>官场、职场、酒场、商场、家庭场等大分类</small>
+          </button>
+          <button class="home-card" type="button" data-route="workplaceRanked">
+            <span>04</span>
+            <strong>职场模拟器排位模式</strong>
+            <small>中文按公务员职级，日文按日本职场称号</small>
+          </button>
+          <button class="home-card" type="button" data-route="toast">
+            <span>05</span>
+            <strong>敬酒词</strong>
+            <small>随机祝福语，也可按不同场所二次筛选</small>
+          </button>
+        </nav>
+      </section>
+
+      <section class="app-view is-hidden" id="appView" aria-live="polite">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow" id="viewEyebrow">模式</p>
+            <h2 id="viewTitle">功能</h2>
+          </div>
+          <button class="ghost-button" id="backButton" type="button">返回首页</button>
+        </div>
+
+        <div class="filters" id="filters">
+          <label>
+            <span>大分类</span>
+            <select id="categorySelect"></select>
+          </label>
+          <label>
+            <span>小分类</span>
+            <select id="subcategorySelect"></select>
+          </label>
+          <button id="randomButton" type="button">随机一题</button>
+        </div>
+
+        <article class="terminal-card" id="contentCard"></article>
+        <article class="terminal-card result-card is-hidden" id="resultCard"></article>
+      </section>
+    </main>
+
+    <script src="./data/site-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
