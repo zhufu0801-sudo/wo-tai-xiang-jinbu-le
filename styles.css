@@ -12,6 +12,20 @@
   --red: #ff8a8a;
 }
 
+.mentor-section{margin-top:64px;padding-top:32px;border-top:1px solid var(--line)}
+.mentor-section h2{margin-bottom:16px;font-size:clamp(1.8rem,4vw,2.8rem)}
+.mentor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+.mentor-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#111d27,#07090d);line-height:1.75}
+.mentor-card h3{font-size:1.35rem}.mentor-card a{color:var(--accent)}.mentor-download{display:inline-block;margin:8px 0 16px;text-underline-offset:4px}
+.mentor-card details{font-size:.85rem;color:var(--muted)}.mentor-card summary{cursor:pointer}.mentor-card details p{margin-top:10px}
+.mentor-demo,.mentor-coach{margin-top:20px}.mentor-label{display:grid;gap:10px;margin-bottom:20px}
+.mentor-label textarea{background:var(--panel-2);border:1px solid var(--line-strong);border-radius:8px;color:var(--text);padding:14px;font:inherit;resize:vertical;width:100%}
+.mentor-comparison{display:grid;gap:16px}.mentor-response{padding:20px 0;border-top:1px solid var(--line)}
+.mentor-response blockquote{margin:12px 0;padding:12px 18px;border-left:3px solid var(--accent);background:#101b24;font-size:1.05rem;line-height:1.9}
+.mentor-note{color:var(--muted);font-size:.9rem;line-height:1.8}.recommendation{color:var(--gold);line-height:1.75}.mentor-practice{margin-top:12px}
+button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:760px){.mentor-grid{grid-template-columns:1fr}.mentor-section{margin-top:36px}}
+
 * {
   box-sizing: border-box;
 }

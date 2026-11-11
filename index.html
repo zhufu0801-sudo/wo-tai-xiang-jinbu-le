@@ -21,7 +21,7 @@
       <section class="home-view" id="homeView">
         <p class="eyebrow">弦外之音 / 职场模拟 / 敬酒词</p>
         <h1>我太想进步了</h1>
-        <p class="lead">训练听懂话外音、场面话、职场暗示和饭局礼仪。首页只保留五个入口，点进去再按大分类和小分类筛选。</p>
+        <p class="lead">练习听懂话外音、澄清真实需要，也守住自己的边界。从情境练习开始，或看看三种沟通方法会怎样回应。</p>
 
         <nav class="home-grid" aria-label="功能入口">
           <button class="home-card" type="button" data-route="xianwai">
@@ -50,6 +50,26 @@
             <small>随机祝福语，也可按不同场所二次筛选</small>
           </button>
         </nav>
+        <section class="mentor-section" aria-labelledby="mentorTitle">
+          <p class="eyebrow" id="mentorEyebrow">沟通方法实验室</p>
+          <h2 id="mentorTitle">同一句话，换三个角度看</h2>
+          <p class="lead" id="mentorIntro">先看见事实，再理解可能的需要。选择人物方法，查看情境示范，或下载 Skill 在自己的 AI 中使用。</p>
+          <div class="mentor-grid" id="mentorCards"></div>
+          <article class="terminal-card mentor-demo">
+            <label class="mentor-label"><span id="sceneLabel">选择练习情境</span><select id="mentorScenario"></select></label>
+            <p class="question" id="mentorScene"></p>
+            <p class="recommendation" id="mentorRecommendation"></p>
+            <div id="mentorCompare" class="mentor-comparison"></div>
+            <p class="mentor-note" id="mentorDisclaimer">以下是依据公开方法创作的情境示范，不是人物原话、真实经历或本人对你的判断。</p>
+          </article>
+          <article class="terminal-card mentor-coach">
+            <h3 id="coachTitle">把你的情境带进来</h3>
+            <label class="mentor-label"><span id="coachLabel">对方原话、你们的关系、你的目标与边界</span><textarea id="coachInput" maxlength="6000" rows="5" placeholder="例如：同事说‘这点小事都不愿帮？’，我想拒绝加班，但仍希望保持合作。"></textarea></label>
+            <label class="mentor-label"><span id="methodLabel">选择方法</span><select id="coachMethod"></select></label>
+            <button class="ghost-button" id="coachRun" type="button">使用我的 API 分析情境</button>
+            <p id="coachStatus" role="status"></p>
+          </article>
+        </section>
       </section>
 
       <section class="app-view is-hidden" id="appView" aria-live="polite">
@@ -80,5 +100,9 @@
 
     <script src="./data/site-data.js"></script>
     <script src="./app.js"></script>
+    <script src="./data/personas.js"></script>
+    <script src="./mentors.js"></script>
+    <own-ai></own-ai>
+    <script type="module" src="./ai/ai-panel.mjs"></script>
   </body>
 </html>
